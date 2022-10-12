@@ -6,7 +6,7 @@ Space Tourism Website
 
 ### Links
 
-- Live Site URL: [https://space-tourism-website-10.netlify.app/]
+- Live Site URL: [https://space-tourism-website-10.vercel.app/]
 
 ### Built with
 
