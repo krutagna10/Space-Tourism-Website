@@ -10,6 +10,7 @@
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
+    --layerColor: #fff;
 
     /* Font-families*/
     --font-family-bellefair: 'Bellefair', serif;;
@@ -171,17 +172,133 @@ body {
     margin-right: 0.5rem;
 }
 
-.close-button {
-    display: none;
-}
 
-.menu-button,
-.close-button {
+.mobile-navigation-button {
     background: transparent;
-    border: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
     position: relative;
     z-index: 999;
-    cursor: pointer;
+}
+
+.layer1,
+.layer2,
+.layer3 {
+    width: 100%;
+    height: 0.15rem;
+    background-color: var(--layerColor);
+    transition: all 1s ease;
+    border-radius: 0.25rem;
+}
+
+.mobile-navigation-button.active .layer1 {
+    animation: slide-down 0.8s ease-in-out forwards;
+}
+
+.mobile-navigation-button .layer1 {
+    animation: slide-down-reverse 0.8s ease-in-out forwards;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(0, 0.5rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0.5rem) rotate(45deg);
+    }
+}
+
+@keyframes slide-down-reverse {
+    0% {
+        transform: translate(0, 0.5rem) rotate(45deg);
+    }
+
+    50% {
+        transform: translate(0, 0.5rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+.mobile-navigation-button.active .layer2 {
+    animation: fade-away 0.8s ease-in-out forwards;
+}
+
+.mobile-navigation-button .layer2 {
+    animation: fade-away-reverse 0.8s ease-in-out forwards;
+}
+
+@keyframes fade-away {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-away-reverse {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.mobile-navigation-button.active .layer3 {
+    animation: slide-up 0.8s ease-in-out forwards;
+}
+
+.mobile-navigation-button .layer3 {
+    animation: slide-up-reverse 0.8s ease-in-out forwards;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(0rem, -0.5rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0rem, -0.5rem) rotate(135deg);
+    }
+}
+
+@keyframes slide-up-reverse {
+    0% {
+        transform: translate(0rem, -0.5rem) rotate(135deg);
+    }
+
+    50% {
+        transform: translate(0rem, -0.5rem) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0rem, 0rem) rotate(0deg);
+    }
 }
 
 .nav-icon {
@@ -195,14 +312,6 @@ body {
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0%);
-}
-
-.navigation-open .close-button {
-    display: block;
-}
-
-.navigation-open .menu-button {
-    display: none;
 }
 
 
