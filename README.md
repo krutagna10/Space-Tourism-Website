@@ -2,7 +2,7 @@ Space Tourism Website
 
 ### Screenshot
 
-![](Screenshot/Screenshot.png)
+![](screenshot/Screenshot.png)
 
 ### Links
 
@@ -10,9 +10,8 @@ Space Tourism Website
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS Grid
-- CSS Flexbox
+- HTML
+- CSS 
 - Vanilla Javascript
 
 
