@@ -1,4 +1,4 @@
-const mainNavLinks = document.querySelectorAll('.main-nav-link');
+const mainNavLinks = document.querySelectorAll('.header__nav-link');
 
 let currentActive = 0;
 mainNavLinks.forEach((mainNavLink, index) => {
@@ -20,10 +20,10 @@ function update() {
 
 
 // Mobile Navigation
-let mobileNavigationButton = document.querySelector('.mobile-navigation-button');
+const mobileNavToggle = document.querySelector('.header__mobile-nav-toggle');
+const header = document.querySelector('.header');
 
-mobileNavigationButton.addEventListener('click', () => {
-    document.querySelector('.primary-header').classList.toggle('navigation-open');
-    mobileNavigationButton.classList.toggle('active');
-})
+mobileNavToggle.addEventListener('click', () => {
+    header.classList.toggle('nav-open');
+});
 

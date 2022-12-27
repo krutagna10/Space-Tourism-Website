@@ -10,7 +10,6 @@
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
-    --layerColor: #fff;
 
     /* Font-families*/
     --font-family-bellefair: 'Bellefair', serif;;
@@ -114,7 +113,7 @@ body {
 /**************/
 /*   Header   */
 /**************/
-.primary-header {
+.header {
     padding: 2rem 1.75rem;
     display: flex;
     justify-content: space-between;
@@ -124,9 +123,10 @@ body {
 
 
 
-.main-nav {
+.header__nav {
     position: fixed;
     inset: 0 0 0 25%;
+    /*padding: min(20rem, 10vh) 2rem;*/
     background-color: hsl(var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
     display: flex;
@@ -142,14 +142,14 @@ body {
 
 }
 
-.main-nav-list {
+.header__nav-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     list-style: none;
 }
 
-.main-nav-link {
+.header__nav-link {
     display: block;
     color: hsl(var(--clr-light));
     font-size: var(--font-size-200);
@@ -162,151 +162,32 @@ body {
     cursor: pointer;
 }
 
-.main-nav-link:hover {
+.header__nav-link:hover {
     color: hsl(var(--clr-white));
 }
 
-.main-nav .number {
+.header__nav .header__nav-link-number {
     font-size: var(--font-size-200);
     font-weight: 700;
     margin-right: 0.5rem;
 }
 
-
-.mobile-navigation-button {
-    background: transparent;
-    cursor: pointer;
+.header__mobile-nav-toggle {
+    display: block;
     width: 2rem;
     height: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.35rem;
-    position: relative;
+    background: transparent url('/images/icons/icon-hamburger.svg') no-repeat center;
+    border: none;
+    cursor: pointer;
     z-index: 999;
 }
 
-.layer1,
-.layer2,
-.layer3 {
-    width: 100%;
-    height: 0.15rem;
-    background-color: var(--layerColor);
-    transition: all 1s ease;
-    border-radius: 0.25rem;
-}
-
-.mobile-navigation-button.active .layer1 {
-    animation: slide-down 0.8s ease-in-out forwards;
-}
-
-.mobile-navigation-button .layer1 {
-    animation: slide-down-reverse 0.8s ease-in-out forwards;
-}
-
-@keyframes slide-down {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-
-    50% {
-        transform: translate(0, 0.5rem) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(0, 0.5rem) rotate(45deg);
-    }
-}
-
-@keyframes slide-down-reverse {
-    0% {
-        transform: translate(0, 0.5rem) rotate(45deg);
-    }
-
-    50% {
-        transform: translate(0, 0.5rem) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-}
-
-
-.mobile-navigation-button.active .layer2 {
-    animation: fade-away 0.8s ease-in-out forwards;
-}
-
-.mobile-navigation-button .layer2 {
-    animation: fade-away-reverse 0.8s ease-in-out forwards;
-}
-
-@keyframes fade-away {
-    from {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-@keyframes fade-away-reverse {
-    from {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.mobile-navigation-button.active .layer3 {
-    animation: slide-up 0.8s ease-in-out forwards;
-}
-
-.mobile-navigation-button .layer3 {
-    animation: slide-up-reverse 0.8s ease-in-out forwards;
-}
-
-@keyframes slide-up {
-    0% {
-        transform: translate(0rem, 0rem) rotate(0deg);
-    }
-
-    50% {
-        transform: translate(0rem, -0.5rem) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(0rem, -0.5rem) rotate(135deg);
-    }
-}
-
-@keyframes slide-up-reverse {
-    0% {
-        transform: translate(0rem, -0.5rem) rotate(135deg);
-    }
-
-    50% {
-        transform: translate(0rem, -0.5rem) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(0rem, 0rem) rotate(0deg);
-    }
-}
-
-.nav-icon {
-    height: 1.25rem
+.nav-open .header__mobile-nav-toggle {
+    background-image: url('/images/icons/icon-close.svg');
 }
 
 /* When the navigation is open */
-.navigation-open .main-nav {
+.nav-open .header__nav {
     opacity: 1;
     z-index: 10;
     pointer-events: auto;
@@ -316,23 +197,23 @@ body {
 
 
 @media (min-width: 45em) {
-    .primary-header {
+    .header {
         padding: 0;
     }
 
-    .logo-container {
+    .header__logo-wrapper {
         padding: 0 1.75rem;
     }
 
-    .number {
+    .header__nav-link-number {
         display: none;
     }
 
-    .mobile-navigation {
+    .header__mobile-nav-toggle {
         display: none;
     }
 
-    .main-nav {
+    .header__nav {
         position: static;
         display: block;
         opacity: 1;
@@ -342,12 +223,12 @@ body {
         transform: translateX(0%);
     }
 
-    .main-nav-list {
+    .header__nav-list {
         flex-direction: row;
         gap: 1.75rem;
     }
 
-    .main-nav-link {
+    .header__nav-link {
         display: block;
         color: hsl(var(--clr-white));
         font-size: var(--font-size-200);
@@ -359,7 +240,7 @@ body {
         transition: all 0.3s ease;
     }
 
-    .main-nav-link::before {
+    .header__nav-link::before {
         content: '';
         position: absolute;
         width: 0;
@@ -368,12 +249,12 @@ body {
         border-bottom: 0.2rem solid hsl(var(--clr-white) / 0.6);
     }
 
-    .main-nav-link:hover::before,
-    .main-nav-link:focus::before {
+    .header__nav-link:hover::before,
+    .header__nav-link:focus::before {
         animation: border-animation 0.8s linear forwards;
     }
 
-    .main-nav-link.active::before {
+    .header__nav-link.active::before {
         border-bottom: 0.2rem solid hsl(var(--clr-white));
         animation: none !important;
         width: 100%;
@@ -392,30 +273,30 @@ body {
 
 
 @media (min-width: 60em) {
-    .primary-header {
+    .header {
         padding: 2rem 0 2rem 2rem;
         overflow: hidden;
     }
 
-    .main-nav {
+    .header__nav {
         padding-inline: 3rem;
     }
 
-    .main-nav-list {
+    .header__nav-list {
         gap: 3rem;
     }
 
-    .logo-container {
+    .header__logo-wrapper {
         padding: 0;
     }
 
-    .number {
+    .header__nav-link-number {
         display: inline;
     }
 }
 
 @media (min-width: 65em) {
-    .main-nav {
+    .header__nav {
         padding-inline: 8rem;
     }
 }
@@ -423,55 +304,55 @@ body {
 /* Pages background images*/
 
 .home {
-    background-image: url('../images/home/background-home-mobile.jpg');
+    background-image: url('/images/home/background-home-mobile.jpg');
 }
 
 .destination {
-    background-image: url(../images/destination/background-destination-mobile.jpg);
+    background-image: url(/images/destination/background-destination-mobile.jpg);
 }
 
 .crew {
-    background-image: url(../images/crew/background-crew-mobile.jpg);
+    background-image: url(/images/crew/background-crew-mobile.jpg);
 }
 
 .technology {
-    background-image: url('../images/technology/background-technology-mobile.jpg');
+    background-image: url('/images/technology/background-technology-mobile.jpg');
 }
 
 @media (min-width: 35em) {
     .home {
-        background-image: url('../images/home/background-home-tablet.jpg');
+        background-image: url('/images/home/background-home-tablet.jpg');
     }
 
     .destination {
-        background-image: url(../images/destination/background-destination-tablet.jpg);
+        background-image: url(/images/destination/background-destination-tablet.jpg);
     }
 
     .crew {
-        background-image: url(../images/crew/background-crew-tablet.jpg);
+        background-image: url(/images/crew/background-crew-tablet.jpg);
     }
 
     .technology {
-        background-image: url('../images/technology/background-technology-tablet.jpg');
+        background-image: url('/images/technology/background-technology-tablet.jpg');
     }
 }
 
 @media (min-width: 45em) {
     .home {
-        background-image: url('../images/home/background-home-desktop.jpg');
+        background-image: url('/images/home/background-home-desktop.jpg');
     }
 
     .destination {
-        background-image: url(../images/destination/background-destination-desktop.jpg);
+        background-image: url(/images/destination/background-destination-desktop.jpg);
     }
 
     .crew {
-        background-image: url(../images/crew/background-crew-desktop.jpg);
+        background-image: url(/images/crew/background-crew-desktop.jpg);
     }
 
 
     .technology {
-        background-image: url('../images/technology/background-technology-desktop.jpg');
+        background-image: url('/images/technology/background-technology-desktop.jpg');
     }
 }
 
