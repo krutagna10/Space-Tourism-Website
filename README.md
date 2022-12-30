@@ -1,4 +1,4 @@
-Space Tourism Website
+# Frontend Mentor - Space Tourism Website
 
 ### Screenshot
 
@@ -6,13 +6,14 @@ Space Tourism Website
 
 ### Links
 
-- Live Site URL: [https://space-tourism-website-10.vercel.app/]
+- Live Site URL: [https://space-tourism-website-10.netlify.app/]
 
 ### Built with
 
 - HTML
-- CSS 
+- CSS
 - Vanilla Javascript
 
-
+## Author
+- Frontend Mentor - [@krutagna10](https://www.frontendmentor.io/profile/krutagna10)
 

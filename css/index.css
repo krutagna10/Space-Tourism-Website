@@ -33,7 +33,7 @@
 }
 
 
-@media (min-width: 35em) {
+@media (min-width: 32em) {
     :root {
         --font-size-700: 2.5rem;
         --font-size-600: 1.5rem;
@@ -44,7 +44,7 @@
     }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 48em) {
     :root {
         --font-size-900: 7.25rem;
         --font-size-800: 6.25rem;
@@ -126,7 +126,6 @@ body {
 .header__nav {
     position: fixed;
     inset: 0 0 0 25%;
-    /*padding: min(20rem, 10vh) 2rem;*/
     background-color: hsl(var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
     display: flex;
@@ -166,33 +165,32 @@ body {
     color: hsl(var(--clr-white));
 }
 
-.header__nav .header__nav-link-number {
+.header__nav .header__link-number {
     font-size: var(--font-size-200);
     font-weight: 700;
     margin-right: 0.5rem;
 }
 
-.header__mobile-nav-toggle {
-    display: block;
-    width: 2rem;
-    height: 1.5rem;
-    background: transparent url('/images/icons/icon-hamburger.svg') no-repeat center;
-    border: none;
-    cursor: pointer;
-    z-index: 999;
-}
-
-.nav-open .header__mobile-nav-toggle {
-    background-image: url('/images/icons/icon-close.svg');
-}
-
 /* When the navigation is open */
-.nav-open .header__nav {
+.navigation-open .header__nav {
     opacity: 1;
     z-index: 10;
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0%);
+}
+
+.header__mobile-nav-toggle {
+    background: url('/images/icons/icon-hamburger.svg') transparent no-repeat center;
+    border: none;
+    width: 2.4rem;
+    height: 1.6rem;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.navigation-open .header__mobile-nav-toggle {
+    background-image: url('/images/icons/icon-close.svg');
 }
 
 
@@ -201,11 +199,11 @@ body {
         padding: 0;
     }
 
-    .header__logo-wrapper {
+    .header__logo-container {
         padding: 0 1.75rem;
     }
 
-    .header__nav-link-number {
+    .header__link-number {
         display: none;
     }
 
@@ -251,7 +249,7 @@ body {
 
     .header__nav-link:hover::before,
     .header__nav-link:focus::before {
-        animation: border-animation 0.8s linear forwards;
+        animation: border-animation 0.3s linear forwards;
     }
 
     .header__nav-link.active::before {
@@ -286,11 +284,11 @@ body {
         gap: 3rem;
     }
 
-    .header__logo-wrapper {
+    .header__logo-container {
         padding: 0;
     }
 
-    .header__nav-link-number {
+    .header__link-number {
         display: inline;
     }
 }
@@ -304,55 +302,55 @@ body {
 /* Pages background images*/
 
 .home {
-    background-image: url('/images/home/background-home-mobile.jpg');
+    background-image: url('../images/home/background-home-mobile.jpg');
 }
 
 .destination {
-    background-image: url(/images/destination/background-destination-mobile.jpg);
+    background-image: url(../images/destination/background-destination-mobile.jpg);
 }
 
 .crew {
-    background-image: url(/images/crew/background-crew-mobile.jpg);
+    background-image: url(../images/crew/background-crew-mobile.jpg);
 }
 
 .technology {
-    background-image: url('/images/technology/background-technology-mobile.jpg');
+    background-image: url('../images/technology/background-technology-mobile.jpg');
 }
 
 @media (min-width: 35em) {
     .home {
-        background-image: url('/images/home/background-home-tablet.jpg');
+        background-image: url('../images/home/background-home-tablet.jpg');
     }
 
     .destination {
-        background-image: url(/images/destination/background-destination-tablet.jpg);
+        background-image: url(../images/destination/background-destination-tablet.jpg);
     }
 
     .crew {
-        background-image: url(/images/crew/background-crew-tablet.jpg);
+        background-image: url(../images/crew/background-crew-tablet.jpg);
     }
 
     .technology {
-        background-image: url('/images/technology/background-technology-tablet.jpg');
+        background-image: url('../images/technology/background-technology-tablet.jpg');
     }
 }
 
 @media (min-width: 45em) {
     .home {
-        background-image: url('/images/home/background-home-desktop.jpg');
+        background-image: url('../images/home/background-home-desktop.jpg');
     }
 
     .destination {
-        background-image: url(/images/destination/background-destination-desktop.jpg);
+        background-image: url(../images/destination/background-destination-desktop.jpg);
     }
 
     .crew {
-        background-image: url(/images/crew/background-crew-desktop.jpg);
+        background-image: url(../images/crew/background-crew-desktop.jpg);
     }
 
 
     .technology {
-        background-image: url('/images/technology/background-technology-desktop.jpg');
+        background-image: url('../images/technology/background-technology-desktop.jpg');
     }
 }
 

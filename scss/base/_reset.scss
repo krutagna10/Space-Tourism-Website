@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-weight: 400;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-barlow);
+  font-size: var(--font-size-200);
+  min-height: 100vh;
+  line-height: 1.5;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: hsl(var(--clr-light));
+  text-rendering: optimizeSpeed;
+  scroll-behavior: smooth;
+}

@@ -1,3 +1,10 @@
+const navToggle = document.querySelector('.header__mobile-nav-toggle');
+const header = document.querySelector('.header')
+navToggle.addEventListener('click', () => {
+    header.classList.toggle('navigation-open');
+})
+
+
 // destination Page
 const destinationPlanets = document.querySelectorAll('.destination-planet');
 const secondaryNavLinks = document.querySelectorAll('.destination-nav-link');
