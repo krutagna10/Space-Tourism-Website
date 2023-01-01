@@ -6,7 +6,7 @@
 
 ### Links
 
-- Live Site URL: [https://vercel.com/krutagna10/space-tourism-website-10]
+- Live Site URL: [https://space-tourism-website-10.vercel.app/]
 
 ### Built with
 
