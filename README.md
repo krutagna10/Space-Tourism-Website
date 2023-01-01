@@ -6,7 +6,7 @@
 
 ### Links
 
-- Live Site URL: [https://space-tourism-website-10.netlify.app/]
+- Live Site URL: [https://vercel.com/krutagna10/space-tourism-website-10]
 
 ### Built with
 
