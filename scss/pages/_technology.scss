@@ -1,0 +1,127 @@
+.technology-page {
+  background-image: url('/images/technology/background-technology-mobile.jpg');
+}
+
+@media (min-width: 35em) {
+  .technology-page {
+    background-image: url('/images/technology/background-technology-tablet.jpg');
+  }
+}
+
+@media (min-width: 45em) {
+  .technology-page {
+    background-image: url('/images/technology/background-technology-desktop.jpg');
+  }
+}
+
+.technology {
+  padding-inline: 0 !important;
+  gap: var(--container-gap);
+}
+
+.technology__nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.technology__nav-link {
+  color: hsl(var(--clr-white));
+  font-size: var(--font-size-600);
+  text-decoration: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 1.25rem;
+  border-radius: 50%;
+  background-color: hsl(var(--clr-dark));
+  border: 1.75px solid hsl(var(--clr-white) / 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.technology__nav-link.active-link {
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+}
+
+.technology__nav-link:hover {
+  border-color: hsl(var(--clr-white));
+}
+
+.technology__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.technology__text-content {
+  display: flex;
+}
+
+.technology__terminology-text {
+  color: hsl(var(--clr-white) / 0.7);
+}
+
+.technology__image-wrapper {
+  grid-row: 2;
+}
+
+
+
+@media(min-width: 45em) {
+  .technology {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .technology__image-wrapper {
+    grid-column: 2;
+  }
+
+  .technology__nav-list {
+    justify-content: left;
+  }
+
+  .technology__nav-link {
+    padding: 1.5rem;
+  }
+
+  .technology__text-content {
+    text-align: left;
+  }
+
+}
+
+@media(min-width: 55em) {
+  .technology {
+    grid-template-columns: 55fr 45fr;
+  }
+
+  .technology__content {
+    display: flex;
+  }
+
+  .technology__nav-list {
+    flex-direction: column;
+  }
+
+  .technology__nav-link {
+    padding: 2rem;
+  }
+
+  .technology__nav-list {
+    margin-right: 2rem;
+    margin-bottom: 0;
+    align-items: center;
+    gap: 2.75rem;
+  }
+}
+
+

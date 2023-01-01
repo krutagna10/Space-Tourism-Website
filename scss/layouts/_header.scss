@@ -1,0 +1,183 @@
+.header {
+  padding: 2rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__nav {
+  position: fixed;
+  inset: 0 0 0 25%;
+  background-color: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+
+  /*Hiding Navigation */
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.header__nav-link {
+  display: block;
+  color: hsl(var(--clr-light));
+  font-size: var(--font-size-200);
+  font-family: var(--font-barlow-condensed);
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 1.75rem 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.header__nav-link:hover {
+  color: hsl(var(--clr-white));
+}
+
+.header__nav .header__link-number {
+  font-size: var(--font-size-200);
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+
+/* When the navigation is open */
+.nav-open .header__nav {
+  opacity: 1;
+  z-index: 10;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(0%);
+}
+
+.header__mobile-nav-toggle {
+  background: url('/images/icons/icon-hamburger.svg') transparent no-repeat center;
+  border: none;
+  width: 2.4rem;
+  height: 1.6rem;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.nav-open .header__mobile-nav-toggle {
+  background-image: url('/images/icons/icon-close.svg');
+}
+
+
+@media (min-width: 45em) {
+  .header {
+    padding: 0;
+  }
+
+  .header__logo-container {
+    padding: 0 1.75rem;
+  }
+
+  .header__link-number {
+    display: none;
+  }
+
+  .header__mobile-nav-toggle {
+    display: none;
+  }
+
+  .header__nav {
+    position: static;
+    display: block;
+    opacity: 1;
+    padding: 0 3rem;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+
+  .header__nav-list {
+    flex-direction: row;
+    gap: 1.75rem;
+  }
+
+  .header__nav-link {
+    display: block;
+    color: hsl(var(--clr-white));
+    font-size: var(--font-size-200);
+    font-family: var(--font-barlow-condensed);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding: 2.25rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .header__nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 0.2rem solid hsl(var(--clr-white) / 0.6);
+  }
+
+  .header__nav-link:hover::before,
+  .header__nav-link:focus::before {
+    animation: border-animation 0.3s linear forwards;
+  }
+
+  .header__nav-link.active::before {
+    border-bottom: 0.2rem solid hsl(var(--clr-white));
+    animation: none !important;
+    width: 100%;
+  }
+
+  @keyframes border-animation {
+    0% {
+      width: 0;
+    }
+
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+
+@media (min-width: 60em) {
+  .header {
+    padding: 2rem 0 2rem 2rem;
+    overflow: hidden;
+  }
+
+  .header__nav {
+    padding-inline: 3rem;
+  }
+
+  .header__nav-list {
+    gap: 3rem;
+  }
+
+  .header__logo-container {
+    padding: 0;
+  }
+
+  .header__link-number {
+    display: inline;
+  }
+}
+
+@media (min-width: 65em) {
+  .header__nav {
+    padding-inline: 8rem;
+  }
+}
