@@ -10,7 +10,7 @@
 
     <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body class="destination">
+<body class="destination-page">
 <header class="header">
     <div class="header__logo-container">
         <img class="header__logo" src="../images/icons/logo.svg" alt="Space Tourism logo">
@@ -34,108 +34,45 @@
 </header>
 
 <main>
-    <section class="hero-section destination-hero">
-        <div class="destination-grid-container">
-            <div class="numbered-heading-container">
+    <section class="destination-section hero-section">
+        <div class="destination grid-container">
+            <div class="destination__heading-wrapper">
                 <h1 class="numbered-heading text-white"><span class="heading-number">01</span> Pick your Destination
                 </h1>
             </div>
 
-            <div class="planet-container">
-                <img src="../images/destination/image-moon.webp" alt="Moon image" class="planet-image">
+            <div class="destination__planet-wrapper">
+                <img class="destination__planet-image" src="/images/destination/image-moon.webp" alt="Moon image">
             </div>
 
-            <div class="intro-content">
-                <nav class="destination-nav">
-                    <ul class="destination-nav-list">
-                        <li><a href="#" class="destination-nav-link active-link letter-spacing-2">Moon</a></li>
-                        <li><a href="#" class="destination-nav-link letter-spacing-2">Mars</a></li>
-                        <li><a href="#" class="destination-nav-link letter-spacing-2">Europa</a></li>
-                        <li><a href="#" class="destination-nav-link letter-spacing-2">Titan</a></li>
+            <div class="destination__content">
+                <nav class="destination__nav">
+                    <ul class="destination__nav-list">
+                        <li><a href="#" class="destination__nav-link active-link letter-spacing-2">Moon</a></li>
+                        <li><a href="#" class="destination__nav-link letter-spacing-2">Mars</a></li>
+                        <li><a href="#" class="destination__nav-link letter-spacing-2">Europa</a></li>
+                        <li><a href="#" class="destination__nav-link letter-spacing-2">Titan</a></li>
                     </ul>
                 </nav>
-                <div class="destination-planet destination-moon current-active-destination">
-                    <h2 class="planet-heading font-size-800 uppercase text-white font-family-bellefair">Moon</h2>
-                    <p class="planet-text font-size-200">
+                <div class="destination__description">
+                    <h2 class="destination__planet font-size-800 uppercase text-white font-bellefair">Moon</h2>
+                    <p class="destination__planet-text font-size-200">
                         See our planet as you’ve never seen it before. A perfect relaxing trip away to help
                         regain perspective and come back refreshed. While you’re there, take in some history
                         by visiting the Luna 2 and Apollo 11 landing sites.
                     </p>
                     <div class="horizontal-line"></div>
-                    <div class="planet-details grid">
-                        <div class="distance">
-                            <h3 class="distance-label">Avg. distance</h3>
-                            <p class="distance-text">384,400 km</p>
+                    <div class="destination__details-wrapper grid">
+                        <div class="destination__detail">
+                            <h3 class="destination__distance-label">Avg. distance</h3>
+                            <p class="destination__distance">384,400 km</p>
                         </div>
-                        <div class="travel-time">
-                            <h3 class="time-label">Est. travel time</h3>
-                            <p class="days-text">3 days</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="destination-planet destination-mars">
-                    <h2 class="planet-heading font-size-800 uppercase text-white font-family-bellefair">Mars</h2>
-                    <p class="planet-text font-size-200">
-                        Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons,
-                        the tallest planetary mountain in our solar system. It’s two and a half times
-                        the size of Everest!
-                    </p>
-                    <div class="horizontal-line"></div>
-                    <div class="planet-details grid">
-                        <div class="distance">
-                            <h3 class="distance-label">Avg. distance</h3>
-                            <p class="distance-text">225 mil. km</p>
-                        </div>
-                        <div class="travel-time">
-                            <h3 class="time-label">Est. travel time</h3>
-                            <p class="days-text">9 months</p>
+                        <div class="destination__detail">
+                            <h3 class="destination__time-label">Est. travel time</h3>
+                            <p class="destination__travel-time">3 days</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="destination-planet destination-europa">
-                    <h2 class="planet-heading font-size-800 uppercase text-white font-family-bellefair">Europa</h2>
-                    <p class="planet-text font-size-200">
-                        The smallest of the four Galilean moons orbiting Jupiter, Europa is a
-                        winter lover’s dream. With an icy surface, it’s perfect for a bit of
-                        ice skating, curling, hockey, or simple relaxation in your snug
-                        wintery cabin.
-                    </p>
-                    <div class="horizontal-line"></div>
-                    <div class="planet-details grid">
-                        <div class="distance">
-                            <h3 class="distance-label">Avg. distance</h3>
-                            <p class="distance-text">628 mil. km</p>
-                        </div>
-                        <div class="travel-time">
-                            <h3 class="time-label">Est. travel time</h3>
-                            <p class="days-text">3 years</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="destination-planet destination-titan">
-                    <h2 class="planet-heading font-size-800 uppercase text-white font-family-bellefair">Titan</h2>
-                    <p class="planet-text font-size-200">
-                        The only moon known to have a dense atmosphere other than Earth, Titan
-                        is a home away from home (just a few hundred degrees colder!). As a
-                        bonus, you get striking views of the Rings of Saturn.
-                    </p>
-                    <div class="horizontal-line"></div>
-                    <div class="planet-details grid">
-                        <div class="distance">
-                            <h3 class="distance-label">Avg. distance</h3>
-                            <p class="distance-text">1.6 bil. km</p>
-                        </div>
-                        <div class="travel-time">
-                            <h3 class="time-label">Est. travel time</h3>
-                            <p class="days-text">7 years</p>
-                        </div>
-                    </div>
-                </div>
-
-
             </div>
         </div>
 

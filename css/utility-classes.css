@@ -1,11 +1,11 @@
 .flex {
     display: flex;
-    gap: var(--text-gap);
+    gap: var(--gap);
 }
 
 .grid {
     display: grid;
-    gap: var(--text-gap)
+    gap: var(--gap)
 }
 
 .container {
@@ -14,6 +14,22 @@
     max-width: 80rem;
 }
 
+.grid-container {
+    max-width: 80rem;
+    padding-inline: 2rem;
+    margin-inline: auto;
+    min-height: 70vh;
+    display: grid;
+    gap: 4.5rem;
+    place-items: center;
+}
+
+/* Headings */
+.primary-heading {
+    font-family: var(--font-barlow-condensed);
+    font-size: var(--font-size-300);
+    text-transform: uppercase;
+}
 
 /* Colors */
 .background-dark {
@@ -41,16 +57,16 @@
 }
 
 /* Typography */
-.font-family-bellefair {
-    font-family: var(--font-family-bellefair);
+.font-bellefair {
+    font-family: var(--font-bellefair);
 }
 
-.font-family-barlow {
-    font-family: var(--font-family-barlow);
+.font-barlow {
+    font-family: var(--font-barlow);
 }
 
-.font-family-barlow-condensed {
-    font-family: var(--font-family-barlow-condensed);
+.font-barlow-condensed {
+    font-family: var(--font-barlow-condensed);
 }
 
 .letter-spacing-1 {
