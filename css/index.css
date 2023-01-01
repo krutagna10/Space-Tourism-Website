@@ -313,7 +313,7 @@ body {
     background-image: url(../images/crew/background-crew-mobile.jpg);
 }
 
-.technology {
+.technology-page {
     background-image: url('../images/technology/background-technology-mobile.jpg');
 }
 
@@ -330,7 +330,7 @@ body {
         background-image: url(../images/crew/background-crew-tablet.jpg);
     }
 
-    .technology {
+    .technology-page {
         background-image: url('../images/technology/background-technology-tablet.jpg');
     }
 }
@@ -349,7 +349,7 @@ body {
     }
 
 
-    .technology {
+    .technology-page {
         background-image: url('../images/technology/background-technology-desktop.jpg');
     }
 }
@@ -435,7 +435,7 @@ body {
 }
 
 @media (min-width: 45rem) {
-    .grid-container {
+    .hero {
         grid-template-columns: 1fr 1fr;
         justify-content: end;
     }
@@ -678,6 +678,10 @@ body {
     max-width: 50%;
 }
 
+.crew__content {
+    display: grid;
+}
+
 .crew__person-post {
     color: hsl(var(--clr-white) / 0.6);
     font-size: var(--font-size-600);
@@ -713,18 +717,12 @@ body {
 
 .crew__text-content {
     text-align: center;
-    display: none;
     flex-direction: column;
     gap: var(--gap);
 }
 
 .crew__person-bio {
     line-height: 2;
-}
-
-.crew__text-content.current-crew-text {
-    display: flex;
-    animation: text-animation 0.6s linear;
 }
 
 @keyframes text-animation {
@@ -798,17 +796,12 @@ body {
 /********************/
 /* technology Page * /
 /********************/
-
-.technology-grid-container {
-    display: grid;
-    max-width: 80rem;
-    margin-inline: auto;
-    min-height: 70vh;
-    place-items: center;
+.technology {
+    padding-inline: 0 !important;
     gap: var(--container-gap);
 }
 
-.technology-nav-list {
+.technology__nav-list {
     display: flex;
     gap: 1.5rem;
     list-style: none;
@@ -818,7 +811,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.technology-nav-link {
+.technology__nav-link {
     color: hsl(var(--clr-white));
     font-size: var(--font-size-600);
     text-decoration: none;
@@ -834,16 +827,16 @@ body {
     transition: all 0.3s ease;
 }
 
-.technology-nav-link.active-link {
+.technology__nav-link.active-link {
     background-color: hsl(var(--clr-white));
     color: hsl(var(--clr-dark));
 }
 
-.technology-nav-link:hover {
+.technology__nav-link:hover {
     border-color: hsl(var(--clr-white));
 }
 
-.technology-text-content {
+.technology__text-content {
     display: flex;
     flex-direction: column;
     gap: var(--gap);
@@ -851,76 +844,61 @@ body {
     padding: 0 1rem;
 }
 
-.technology-text-content {
-    display: none;
-}
-
-.current-technology-text.technology-text-content {
+.technology__text-content {
     display: flex;
 }
 
-.terminology {
+.technology__terminology-text {
     color: hsl(var(--clr-white) / 0.7);
 }
 
-
-.image-container-technology {
+.technology__image-wrapper {
     grid-row: 2;
 }
 
-.portrait-image {
-    display: none;
-}
+
 
 @media(min-width: 45em) {
-    .technology-grid-container {
+    .technology {
         grid-template-columns: 1fr 1fr;
     }
 
-    .landscape-image {
-        display: none;
-    }
-
-    .portrait-image {
-        display: block;
-    }
-
-    .image-container-technology {
+    .technology__image-wrapper {
         grid-column: 2;
     }
 
-    .technology-nav-list {
+    .technology__nav-list {
         justify-content: left;
     }
 
-    .technology-nav-link {
+    .technology__nav-link {
         padding: 1.5rem;
     }
 
-    .technology-text-content {
+    .technology__text-content {
         text-align: left;
     }
 
 }
 
 @media(min-width: 55em) {
-    .technology-grid-container {
+    .technology {
         grid-template-columns: 55fr 45fr;
     }
 
-    .technology-intro-content {
+    .technology__content {
         display: flex;
     }
 
-    .technology-nav-list {
+    .technology__nav-list {
         flex-direction: column;
     }
 
-    .technology-nav-link {
+    .technology__nav-link {
         padding: 2rem;
     }
 
-    .technology-nav-list {
+    .technology__nav-list {
         margin-right: 2rem;
         margin-bottom: 0;
         align-items: center;
