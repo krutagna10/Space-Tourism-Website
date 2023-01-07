@@ -90,7 +90,7 @@
 }
 
 
-@media (min-width: 35em) {
+@media (min-width: 32em) {
   .crew__image-wrapper {
     grid-row: 3;
   }
@@ -109,7 +109,7 @@
 
 }
 
-@media (min-width: 55em) {
+@media (min-width: 56em) {
   .crew {
     grid-template-columns: 1fr 1fr;
     padding-inline: 1rem;
@@ -123,8 +123,9 @@
     text-align: left;
   }
 
-  .crew-hero .destination__heading-wrapper {
-    grid-column: span 2;
+  .crew__heading-wrapper {
+      grid-column: span 2;
+      justify-self: left;
   }
 
   .crew__image-wrapper {

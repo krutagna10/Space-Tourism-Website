@@ -19,6 +19,7 @@
   grid-template-columns: 1fr;
   gap: var(--container-gap);
   position: relative;
+  text-align: center;
 }
 
 .destination__planet-wrapper {
@@ -99,7 +100,6 @@
 }
 
 .destination__description {
-  text-align: center;
   flex-direction: column;
   gap: var(--gap);
   display: flex;
@@ -133,7 +133,7 @@
 }
 
 
-@media (min-width: 35em) {
+@media (min-width: 32em) {
   .destination__details-wrapper {
     grid-template-columns: 1fr 1fr;
   }
@@ -147,9 +147,10 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (min-width: 48em) {
   .destination {
     grid-template-columns: 1fr 1fr;
+    text-align: left;
   }
 
   .destination__description {
@@ -157,11 +158,8 @@
   }
 
   .destination__heading-wrapper {
-    justify-self: left;
-  }
-
-  .destination__heading-wrapper {
     grid-column: span 2;
+    justify-self: left;
   }
 
   .destination__nav-list {
@@ -175,12 +173,9 @@
     max-width: 92%;
   }
 
-  .destination__description {
-    text-align: left;
-  }
 }
 
-@media (min-width: 65em) {
+@media (min-width: 64em) {
   .destination__planet-image {
     max-width: 100%;
   }
