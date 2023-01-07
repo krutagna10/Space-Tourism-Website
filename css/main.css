@@ -235,9 +235,17 @@ body {
 
 .grid {
   display: grid;
-  gap: var(--gap);
 }
 
+.grid--2-columns {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48em) {
+  .grid--2-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .header {
   padding: 2rem 1.75rem;
   display: flex;
@@ -472,7 +480,7 @@ body {
     padding: 0 3rem;
   }
 }
-@media (min-width: 32em) and (min-width: 48em) {
+@media (min-width: 48em) {
   .hero {
     grid-template-columns: 1fr 1fr;
     justify-content: end;
@@ -490,8 +498,8 @@ body {
     padding: 3rem;
   }
 }
-@media (min-width: 32em) and (min-width: 56em) {
-  .hero .hero__btn {
+@media (min-width: 56em) {
+  .hero__btn {
     padding: 4rem;
   }
 }
@@ -636,7 +644,6 @@ body {
 }
 @media (min-width: 48em) {
   .destination {
-    grid-template-columns: 1fr 1fr;
     text-align: left;
   }
   .destination__description {
@@ -731,6 +738,7 @@ body {
 }
 
 .crew__text-content {
+  display: flex;
   text-align: center;
   flex-direction: column;
   gap: var(--gap);
@@ -762,9 +770,8 @@ body {
     max-width: 70%;
   }
 }
-@media (min-width: 56em) {
+@media (min-width: 48em) {
   .crew {
-    grid-template-columns: 1fr 1fr;
     padding-inline: 1rem;
   }
   .crew__nav-list {
@@ -783,9 +790,6 @@ body {
   }
   .crew__image {
     max-width: 100%;
-  }
-  .destination__content {
-    display: grid;
   }
   .crew__nav {
     grid-row: 3;
@@ -867,9 +871,6 @@ body {
 }
 
 @media (min-width: 48em) {
-  .technology {
-    grid-template-columns: 1fr 1fr;
-  }
   .technology__image-wrapper {
     grid-column: 2;
   }
@@ -882,11 +883,12 @@ body {
   .technology__text-content {
     text-align: left;
   }
+  .technology__heading-wrapper {
+    grid-column: span 2;
+    justify-self: left;
+  }
 }
 @media (min-width: 56em) {
-  .technology {
-    grid-template-columns: 55fr 45fr;
-  }
   .technology__content {
     display: flex;
   }
@@ -895,10 +897,6 @@ body {
   }
   .technology__nav-link {
     padding: 2rem;
-  }
-  .technology__heading-wrapper {
-    grid-column: span 2;
-    justify-self: left;
   }
   .technology__nav-list {
     margin-right: 2rem;

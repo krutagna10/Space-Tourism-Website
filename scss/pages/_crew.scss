@@ -70,6 +70,7 @@
 }
 
 .crew__text-content {
+  display: flex;
   text-align: center;
   flex-direction: column;
   gap: var(--gap);
@@ -109,9 +110,8 @@
 
 }
 
-@media (min-width: 56em) {
+@media (min-width: 48em) {
   .crew {
-    grid-template-columns: 1fr 1fr;
     padding-inline: 1rem;
   }
 
@@ -135,10 +135,6 @@
 
   .crew__image {
     max-width: 100%;
-  }
-
-  .destination__content {
-    display: grid;
   }
 
   .crew__nav {

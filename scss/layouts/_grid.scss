@@ -1,5 +1,15 @@
 .grid {
   display: grid;
-  gap: var(--gap)
+}
+
+.grid--2-columns {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48em) {
+  .grid--2-columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
 }
 
