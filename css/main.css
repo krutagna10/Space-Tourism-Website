@@ -264,6 +264,7 @@ body {
   align-items: center;
   transform: translateX(100%);
   transition: all 0.5s ease;
+  z-index: 10;
   /*Hiding Navigation */
   opacity: 0;
   pointer-events: none;
@@ -272,7 +273,6 @@ body {
 
 .nav-open .header__nav {
   opacity: 1;
-  z-index: 10;
   pointer-events: auto;
   visibility: visible;
   transform: translateX(0%);
@@ -482,7 +482,6 @@ body {
 }
 @media (min-width: 48em) {
   .hero {
-    grid-template-columns: 1fr 1fr;
     justify-content: end;
   }
   .hero__text-content {
@@ -520,7 +519,6 @@ body {
 }
 .destination {
   padding-inline: 1.5rem;
-  grid-template-columns: 1fr;
   gap: var(--container-gap);
   position: relative;
   text-align: center;
@@ -891,6 +889,9 @@ body {
 @media (min-width: 56em) {
   .technology__content {
     display: flex;
+  }
+  .technology__name {
+    white-space: nowrap;
   }
   .technology__nav-list {
     flex-direction: column;

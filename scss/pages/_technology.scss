@@ -102,6 +102,10 @@
     display: flex;
   }
 
+  .technology__name {
+    white-space: nowrap;
+  }
+
   .technology__nav-list {
     flex-direction: column;
   }

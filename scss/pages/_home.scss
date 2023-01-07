@@ -91,7 +91,6 @@
 
   @media (min-width: 48em) {
     & {
-      grid-template-columns: 1fr 1fr;
       justify-content: end;
     }
 
@@ -116,7 +115,6 @@
     &__btn {
       padding: 4rem;
     }
-
   }
 }
 
