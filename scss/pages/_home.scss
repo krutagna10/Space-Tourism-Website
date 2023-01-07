@@ -37,6 +37,12 @@
     flex-direction: column;
   }
 
+  &__heading {
+    font-family: var(--font-barlow-condensed);
+    font-size: var(--font-size-300);
+    text-transform: uppercase;
+  }
+
   &__text {
     line-height: 2;
   }
@@ -53,6 +59,7 @@
 
   &__btn {
     font-family: var(--font-barlow);
+    color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-white));
     position: relative;
     display: inline-grid;
