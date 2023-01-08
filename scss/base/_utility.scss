@@ -1,3 +1,9 @@
+// Spacing
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+
 /* Headings */
 .numbered-heading {
   font-family: var(--font-barlow-condensed);

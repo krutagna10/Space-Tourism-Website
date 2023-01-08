@@ -8,7 +8,7 @@
     background-color: hsl(var(--clr-white) / 0.05);
     backdrop-filter: blur(1.5rem);
     transform: translateX(100%);
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
     z-index: 10;
 
     // Hiding Navigation
@@ -24,6 +24,11 @@
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0%);
+  }
+
+  // Dark background when technology page is opened
+  .technology-page &__nav {
+    background-color: rgba(0, 0, 0, 0.25);
   }
 
   &__nav-list {
@@ -56,6 +61,7 @@
     margin-right: 0.5rem;
   }
 
+  // Mobile Nav Toggle
   &__mobile-nav-toggle {
     background: url('/images/icons/icon-hamburger.svg') transparent no-repeat center;
     border: none;

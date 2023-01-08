@@ -2,6 +2,10 @@
   display: grid;
 }
 
+.grid--gap {
+  gap: var(--gap);
+}
+
 .grid--2-columns {
   grid-template-columns: 1fr;
 }
