@@ -668,11 +668,11 @@ body {
   --gap: 1.75rem;
   padding-inline: 1rem;
   min-height: 70vh;
+  padding-top: 1.25rem;
 }
 .crew__image-wrapper {
   grid-row: 2;
   justify-content: center;
-  transform: translateY(1rem);
 }
 .crew__image {
   max-width: 50%;
@@ -734,6 +734,10 @@ body {
     grid-column: span 2;
     justify-self: left;
   }
+  .crew__nav {
+    margin-top: 5rem;
+    grid-row: 3;
+  }
   .crew__nav-list {
     justify-content: left;
   }
@@ -746,10 +750,7 @@ body {
   }
   .crew__image {
     max-width: 100%;
-  }
-  .crew__nav {
-    grid-row: 3;
-    margin-top: 4rem;
+    transform: translateY(4rem);
   }
 }
 

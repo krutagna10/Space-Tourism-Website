@@ -19,12 +19,12 @@
 
   padding-inline: 1rem;
   min-height: 70vh;
-  
+  padding-top: 1.25rem;
+
 
   &__image-wrapper {
     grid-row: 2;
     justify-content: center;
-    transform: translateY(1rem);
   }
 
   &__image {
@@ -103,6 +103,11 @@
       justify-self: left;
     }
 
+    &__nav {
+      margin-top: 5rem;
+      grid-row: 3;
+    }
+
     &__nav-list {
       justify-content: left;
     }
@@ -118,11 +123,7 @@
 
     &__image {
       max-width: 100%;
-    }
-
-    &__nav {
-      grid-row: 3;
-      margin-top: 4rem;
+      transform: translateY(4rem);
     }
   }
 }
