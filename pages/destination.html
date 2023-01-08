@@ -16,7 +16,7 @@
 <body class="destination-page">
 <header class="header flex flex--justify-space flex--align-center">
     <a class="header__logo-link" href="../index.html">
-        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism logo">
+        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism" aria-label="Primary Navigation">
     </a>
     <nav class="header__nav flex flex--center">
         <ul class="header__nav-list flex">
@@ -42,7 +42,9 @@
             </li>
         </ul>
     </nav>
-    <button class="header__mobile-nav-toggle"></button>
+    <button class="header__mobile-nav-toggle" aria-controls="header__nav">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
 </header>
 
 <main>
@@ -59,7 +61,7 @@
             </div>
 
             <div class="destination__content">
-                <nav class="destination__nav">
+                <nav class="destination__nav" aria-label="Secondary Navigation">
                     <ul class="destination__nav-list flex flex--gap">
                         <li><a href="#" class="destination__nav-link active-link">Moon</a></li>
                         <li><a href="#" class="destination__nav-link">Mars</a></li>

@@ -750,7 +750,6 @@ body {
   }
   .crew__image {
     max-width: 100%;
-    transform: translateY(4rem);
   }
 }
 

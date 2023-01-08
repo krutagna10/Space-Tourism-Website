@@ -18,9 +18,9 @@
 
 <header class="header flex flex--justify-space flex--align-center">
     <a class="header__logo-link" href="../index.html">
-        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism logo">
+        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism">
     </a>
-    <nav class="header__nav flex flex--center">
+    <nav id="header__nav" class="header__nav flex flex--center" aria-label="Primary Navigation">
         <ul class="header__nav-list flex">
             <li>
                 <a href="../index.html" class="header__nav-link">
@@ -44,7 +44,9 @@
             </li>
         </ul>
     </nav>
-    <button class="header__mobile-nav-toggle"></button>
+    <button class="header__mobile-nav-toggle" aria-controls="header__nav">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
 </header>
 
 <main>
@@ -54,7 +56,7 @@
                 <h1 class="crew__heading numbered-heading text-white"><span class="heading-number">02</span>Meet your Crew</h1>
             </div>
             <div class="crew__content grid">
-                <nav class="crew__nav">
+                <nav class="crew__nav" aria-label="Secondary Navigation">
                     <ul class="crew__nav-list flex flex--align-center flex--gap">
                         <li><a href="#" class="crew__nav-link active-link"></a></li>
                         <li><a href="#" class="crew__nav-link"></a></li>

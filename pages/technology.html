@@ -19,7 +19,7 @@
 
 <header class="header flex flex--justify-space flex--align-center">
     <a class="header__logo-link" href="../index.html">
-        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism logo">
+        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism" aria-label="Primary Navigation">
     </a>
     <nav class="header__nav flex flex--center">
         <ul class="header__nav-list flex">
@@ -45,7 +45,9 @@
             </li>
         </ul>
     </nav>
-    <button class="header__mobile-nav-toggle"></button>
+    <button class="header__mobile-nav-toggle">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
 </header>
 
 <main>
@@ -56,7 +58,7 @@
             </div>
 
             <div class="technology__content">
-                <nav class="technology__nav">
+                <nav class="technology__nav" aria-label="Secondary Navigation">
                     <ul class="technology__nav-list flex flex--gap flex--align-center">
                         <li><a href="#" class="technology__nav-link active-link flex flex--center">1</a></li>
                         <li><a href="#" class="technology__nav-link flex flex--center">2</a></li>

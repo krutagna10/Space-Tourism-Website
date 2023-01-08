@@ -17,10 +17,10 @@
 <body class="home-page">
 <header class="header flex flex--justify-space flex--align-center">
     <a class="header__logo-link" href="#">
-        <img class="header__logo" src="images/icons/logo.svg" alt="Space Tourism logo">
+        <img class="header__logo" src="images/icons/logo.svg" alt="Space Tourism">
     </a>
 
-    <nav class="header__nav flex flex--center">
+    <nav id="header__nav" class="header__nav flex flex--center" aria-label="Primary Navigation">
         <ul class="header__nav-list flex">
             <li>
                 <a href="index.html" class="header__nav-link active">
@@ -43,7 +43,9 @@
             </li>
         </ul>
     </nav>
-    <button class="header__mobile-nav-toggle"></button>
+    <button class="header__mobile-nav-toggle" aria-controls="header__nav">
+        <span class="sr-only" aria-expanded="false">Menu</span>
+    </button>
 </header>
 
 <main>
