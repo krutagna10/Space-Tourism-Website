@@ -15,11 +15,9 @@
 }
 
 .crew {
-  --gap: 1.75rem;
-
-  padding-inline: 1rem;
   min-height: 70vh;
   padding-top: 1.25rem;
+  gap: 1.75rem;
 
 
   &__image-wrapper {

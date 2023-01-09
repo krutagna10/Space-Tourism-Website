@@ -15,8 +15,8 @@
 }
 
 .technology {
-  --gap: 1.75rem;
-
+  gap: 2rem;
+  min-height: 70vh;
   padding-inline: 0 !important;
 
   &__nav-list {

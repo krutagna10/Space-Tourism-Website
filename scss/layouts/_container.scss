@@ -1,13 +1,10 @@
 .container {
+  max-width: 80rem;
   padding-inline: 2rem;
   margin-inline: auto;
-  max-width: 80rem;
 }
 
 .grid-container {
-  max-width: 80rem;
-  padding-inline: 2rem;
-  margin-inline: auto;
   min-height: 70vh;
   display: grid;
   gap: 4.5rem;

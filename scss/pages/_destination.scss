@@ -15,9 +15,9 @@
 }
 
 .destination {
-  --gap: 1.75rem;
-
+  min-height: 70vh;
   padding-inline: 1.5rem;
+  gap: 4.5rem;
   position: relative;
   text-align: center;
 

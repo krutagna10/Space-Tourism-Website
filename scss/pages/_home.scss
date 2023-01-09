@@ -31,6 +31,10 @@
 }
 
 .hero {
+  min-height: 70vh;
+  gap: 4.5rem;
+  place-items: center;
+
   &__text-content {
     text-align: center;
     display: flex;
