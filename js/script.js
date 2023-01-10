@@ -2,9 +2,17 @@ import data from './data.json' assert {type: 'json'};
 
 // Mobile Navigation Toggle
 const navToggle = document.querySelector('.header__mobile-nav-toggle');
-const header = document.querySelector('.header')
+const navList = document.querySelector('.header__nav-list');
+
 navToggle.addEventListener('click', () => {
-    header.classList.toggle('nav-open');
+    const visibility = navList.getAttribute('data-visible');
+    if (visibility === 'false') {
+        navList.setAttribute('data-visible', true);
+        navToggle.setAttribute('aria-expanded', true);
+    } else {
+        navList.setAttribute("data-visible", false);
+        navToggle.setAttribute("aria-expanded", false);
+    }
 })
 
 // General functions for links
@@ -47,7 +55,7 @@ const crewPersonBio = document.querySelector('.crew__person-bio');
 const crewPersonPost = document.querySelector('.crew__person-post');
 const crewPersonName = document.querySelector('.crew__person-name');
 
-crewNavLinks.forEach( (navLink, index) => {
+crewNavLinks.forEach((navLink, index) => {
     navLink.addEventListener('click', () => {
         update(crewNavLinks, index);
         crewPersonPost.textContent = data.crew[index].role;
