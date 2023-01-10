@@ -42,6 +42,17 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 .flow > * + * {
   margin-top: var(--flow-space);
 }
@@ -314,7 +325,8 @@ body {
   transform: translateX(100%);
   transition: all 0.4s ease;
   z-index: 99;
-  padding: min(20rem, 15vh) 2rem;
+  padding-inline: 2rem;
+  justify-content: center;
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -356,6 +368,11 @@ body {
 }
 .header__mobile-nav-toggle[aria-expanded=true] {
   background-image: url("/images/icons/icon-close.svg");
+}
+@media (min-width: 36em) {
+  .header__nav-list {
+    left: 50%;
+  }
 }
 @media (min-width: 48em) {
   .header {
@@ -422,6 +439,7 @@ body {
     overflow: hidden;
   }
   .header__nav-list {
+    padding-inline: 6rem;
     gap: 3rem;
   }
   .header__link-number {

@@ -18,7 +18,8 @@
     transform: translateX(100%);
     transition: all 0.4s ease;
     z-index: 99;
-    padding: min(20rem, 15vh) 2rem;
+    padding-inline: 2rem;
+    justify-content: center;
 
     // Hiding navigation
     opacity: 0;
@@ -71,6 +72,12 @@
 
   &__mobile-nav-toggle[aria-expanded='true'] {
     background-image: url('/images/icons/icon-close.svg');
+  }
+
+  @media (min-width: 36em) {
+    &__nav-list {
+      left: 50%;
+    }
   }
 
   @media (min-width: 48em) {
@@ -152,6 +159,7 @@
     }
 
     &__nav-list {
+      padding-inline: 6rem;
       gap: 3rem;
     }
 
