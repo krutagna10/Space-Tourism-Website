@@ -20,7 +20,7 @@
   font-weight: 700;
 }
 
-// Screen Read
+// Screen Reader Only
 .sr-only {
   position: absolute;
   width: 1px;
@@ -31,6 +31,22 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+// Skip to content
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: transparent;
+  color: var(--white);
+  padding: .5em 1em;
+  margin-inline: auto;
+  transform: translateY(-250%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(-130%);
 }
 
 // Background Colors

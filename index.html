@@ -16,11 +16,13 @@
 </head>
 <body class="home-page">
 <header class="header flex flex--justify-space flex--align-center">
+    <a class="skip-to-content" href="#main">Skip to content</a>
+
     <a class="header__logo-link" href="#">
         <img class="header__logo" src="images/icons/logo.svg" alt="Space Tourism">
     </a>
 
-    <nav id="header__nav" class="header__nav flex flex--center" aria-label="Primary Navigation">
+    <nav class="header__nav flex flex--center" aria-label="primary navigation">
         <ul id="header__nav-list" class="header__nav-list flex" data-visible="false">
             <li>
                 <a href="index.html" class="header__nav-link active">
@@ -43,12 +45,12 @@
             </li>
         </ul>
     </nav>
-    <button class="header__mobile-nav-toggle" aria-controls="header__nav-list">
-        <span class="sr-only" aria-expanded="false">Menu</span>
+    <button class="header__mobile-nav-toggle" aria-controls="header__nav-list" aria-expanded="false">
+        <span class="sr-only">Menu</span>
     </button>
 </header>
 
-<main>
+<main id="main">
     <section class="hero-section">
         <div class="hero container grid grid--2-columns grid--items-center">
             <div class="hero__text-content">

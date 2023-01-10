@@ -4,16 +4,37 @@ import data from './data.json' assert {type: 'json'};
 const navToggle = document.querySelector('.header__mobile-nav-toggle');
 const navList = document.querySelector('.header__nav-list');
 
+// Function for hiding navigation
+const hideNavigation = () => {
+    navList.setAttribute('data-visible', 'false');
+    navToggle.setAttribute('aria-expanded', 'false');
+};
+
+// When the user clicks on nav toggle
 navToggle.addEventListener('click', () => {
     const visibility = navList.getAttribute('data-visible');
     if (visibility === 'false') {
-        navList.setAttribute('data-visible', true);
-        navToggle.setAttribute('aria-expanded', true);
+        navList.setAttribute('data-visible', 'true');
+        navToggle.setAttribute('aria-expanded', 'true');
     } else {
-        navList.setAttribute("data-visible", false);
-        navToggle.setAttribute("aria-expanded", false);
+        navList.setAttribute('data-visible', 'false');
+        navToggle.setAttribute('aria-expanded', 'false');
     }
-})
+});
+
+// When the user clicks the escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        hideNavigation();
+    }
+});
+
+// When the width is greater than 768 pixels
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        hideNavigation();
+    }
+});
 
 // General functions for links
 const update = (links, currentActive) => {

@@ -74,6 +74,21 @@ body {
   border: 0;
 }
 
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: transparent;
+  color: var(--white);
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transform: translateY(-250%);
+  transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(-130%);
+}
+
 .background-dark {
   background-color: hsl(var(--clr-dark));
 }
@@ -225,13 +240,6 @@ body {
   max-width: 80rem;
   padding-inline: 2rem;
   margin-inline: auto;
-}
-
-.grid-container {
-  min-height: 70vh;
-  display: grid;
-  gap: 4.5rem;
-  place-items: center;
 }
 
 .flex {
