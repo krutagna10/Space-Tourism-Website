@@ -453,7 +453,7 @@ body {
     height: 1px;
     background-color: hsl(var(--clr-white)/0.25);
     position: relative;
-    margin-right: -3.25rem;
+    margin-right: -4rem;
     z-index: -1;
   }
   .header__link-number {
