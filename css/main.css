@@ -311,16 +311,13 @@ body {
   padding: 2rem 1.75rem;
   position: relative;
 }
-.technology-page .header__nav {
-  background-color: rgba(0, 0, 0, 0.25);
-}
 .header__nav-list {
+  position: fixed;
   background-color: hsl(var(--clr-white)/0.05);
   backdrop-filter: blur(1.5rem);
   flex-direction: column;
   gap: 0.5rem;
   list-style: none;
-  position: fixed;
   inset: 0 0 0 40%;
   transform: translateX(100%);
   transition: all 0.4s ease;
@@ -336,6 +333,9 @@ body {
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
+}
+.technology-page .header__nav-list[data-visible=true] {
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .header__nav-link {
   display: block;
@@ -381,12 +381,15 @@ body {
   .header__logo-link {
     padding-inline: 1.75rem;
   }
+  .header__nav {
+    order: 2;
+  }
   .header__nav-list {
     position: static;
     opacity: 1;
-    padding: 0 3rem;
+    padding-inline: clamp(3rem, 8vw, 5.5rem);
     flex-direction: row;
-    gap: 1.75rem;
+    gap: clamp(1.5rem, 4vw, 3rem);
     pointer-events: auto;
     visibility: visible;
     transform: translateX(0%);
@@ -438,9 +441,20 @@ body {
     padding: 2rem 0 2rem 2rem;
     overflow: hidden;
   }
-  .header__nav-list {
-    padding-inline: 6rem;
-    gap: 3rem;
+  .header__logo-link {
+    padding-inline: 0;
+  }
+  .header__logo {
+    margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+  }
+  .header::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: hsl(var(--clr-white)/0.25);
+    position: relative;
+    margin-right: -3.25rem;
+    z-index: -1;
   }
   .header__link-number {
     display: inline;
@@ -707,7 +721,7 @@ body {
   }
 }
 .crew {
-  min-height: 70vh;
+  min-height: 80vh;
   padding-top: 1.25rem;
   gap: 1.75rem;
 }
