@@ -19,9 +19,11 @@
 
 <header class="header flex flex--justify-space flex--align-center">
     <a class="skip-to-content" href="#main">Skip to content</a>
-    <a class="header__logo-link" href="../index.html">
-        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism - Home">
+
+    <a class="header__logo-link" href="../index.html" aria-label="Space Tourism - Home">
+        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism">
     </a>
+
     <nav class="header__nav" aria-label="primary navigation">
         <ul id="header__nav-list" class="header__nav-list flex" data-visible="false">
             <li>
@@ -59,6 +61,11 @@
                     <span class="heading-number">03</span>Space Launch 101</h1>
             </div>
 
+            <picture class="technology__image-wrapper">
+                <source class="technology__portrait-image" media="(min-width:48em)" srcset="/images/technology/image-launch-vehicle-portrait.jpg">
+                <img class="technology__landscape-image" src="/images/technology/image-launch-vehicle-landscape.jpg" alt="Technology image">
+            </picture>
+
             <div class="technology__content">
                 <nav class="technology__nav" aria-label="Secondary Navigation">
                     <ul class="technology__nav-list flex flex--gap flex--align-center">
@@ -80,11 +87,6 @@
                     </p>
                 </div>
             </div>
-
-            <picture class="technology__image-wrapper">
-                <source class="technology__portrait-image" media="(min-width:48em)" srcset="/images/technology/image-launch-vehicle-portrait.jpg">
-                <img class="technology__landscape-image" src="/images/technology/image-launch-vehicle-landscape.jpg" alt="Technology image">
-            </picture>
         </div>
     </section>
 </main>

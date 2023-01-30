@@ -672,7 +672,7 @@ body {
 }
 @media (min-width: 32em) {
   .destination__description {
-    padding: 0 3rem;
+    padding-inline: 3rem;
   }
   .destination__details-wrapper {
     grid-template-columns: 1fr 1fr;
@@ -681,13 +681,21 @@ body {
 @media (min-width: 48em) {
   .destination {
     text-align: left;
+    grid-template-areas: "heading heading" "planet content";
+    place-content: start;
   }
   .destination__heading-wrapper {
-    grid-column: span 2;
     justify-self: left;
+    grid-area: heading;
   }
   .destination__description {
-    padding: 0;
+    padding-inline: 0;
+  }
+  .destination__content {
+    grid-area: content;
+  }
+  .destination__planet-wrapper {
+    grid-area: planet;
   }
   .destination__nav-list {
     --gap: 1.75rem;
@@ -710,12 +718,12 @@ body {
   background-image: url(/images/crew/background-crew-mobile.jpg);
 }
 
-@media (min-width: 35em) {
+@media (min-width: 32em) {
   .crew-page {
     background-image: url(/images/crew/background-crew-tablet.jpg);
   }
 }
-@media (min-width: 45em) {
+@media (min-width: 48em) {
   .crew-page {
     background-image: url(/images/crew/background-crew-desktop.jpg);
   }
@@ -726,7 +734,6 @@ body {
   gap: 1.75rem;
 }
 .crew__image-wrapper {
-  grid-row: 2;
   justify-content: center;
 }
 .crew__image {
@@ -773,9 +780,16 @@ body {
   .crew {
     padding-inline: 5rem;
     padding-bottom: 0;
+    grid-template-areas: "heading" "content" "image";
+  }
+  .crew__heading {
+    grid-area: heading;
   }
   .crew__image-wrapper {
-    grid-row: 3;
+    grid-area: image;
+  }
+  .crew__content {
+    grid-area: content;
   }
   .crew__image {
     max-width: 70%;
@@ -784,9 +798,9 @@ body {
 @media (min-width: 48em) {
   .crew {
     padding-inline: 1rem;
+    grid-template-areas: "heading heading" "content image";
   }
   .crew__heading-wrapper {
-    grid-column: span 2;
     justify-self: left;
   }
   .crew__nav {
@@ -798,10 +812,6 @@ body {
   }
   .crew__text-content {
     text-align: left;
-  }
-  .crew__image-wrapper {
-    grid-column-start: 2;
-    grid-row-start: 2;
   }
   .crew__image {
     max-width: 100%;
@@ -860,12 +870,15 @@ body {
 .technology__terminology-text {
   color: hsl(var(--clr-white)/0.7);
 }
-.technology__image-wrapper {
-  grid-row: 2;
-}
 @media (min-width: 48em) {
+  .technology {
+    grid-template-areas: "heading heading" "content image";
+  }
   .technology__image-wrapper {
-    grid-column: 2;
+    grid-area: image;
+  }
+  .technology__content {
+    grid-area: content;
   }
   .technology__nav-list {
     justify-content: left;
@@ -877,7 +890,7 @@ body {
     text-align: left;
   }
   .technology__heading-wrapper {
-    grid-column: span 2;
+    grid-area: heading;
     justify-self: left;
   }
 }

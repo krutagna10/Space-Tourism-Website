@@ -19,9 +19,11 @@
 
 <header class="header flex flex--justify-space flex--align-center">
     <a class="skip-to-content" href="#main">Skip to content</a>
-    <a class="header__logo-link" href="../index.html">
-        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism - Home">
+
+    <a class="header__logo-link" href="../index.html" aria-label="Space Tourism - Home">
+        <img class="header__logo" src="/images/icons/logo.svg" alt="Space Tourism">
     </a>
+
     <nav class="header__nav" aria-label="primary navigation">
         <ul id="header__nav-list" class="header__nav-list flex" data-visible="false">
             <li>
@@ -58,6 +60,11 @@
                 <h1 class="crew__heading numbered-heading text-white"><span class="heading-number">02</span>Meet your
                     Crew</h1>
             </div>
+
+            <div class="crew__image-wrapper flex">
+                <img class="crew__image" src="../images/crew/image-douglas-hurley.webp" alt="Douglas Hurley image">
+            </div>
+
             <div class="crew__content grid">
                 <nav class="crew__nav" aria-label="Secondary Navigation">
                     <ul class="crew__nav-list flex flex--align-center flex--gap">
@@ -80,9 +87,7 @@
                 </div>
             </div>
 
-            <div class="crew__image-wrapper flex">
-                <img class="crew__image" src="../images/crew/image-douglas-hurley.webp" alt="Douglas Hurley image">
-            </div>
+
         </div>
     </section>
 

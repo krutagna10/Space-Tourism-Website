@@ -117,9 +117,10 @@
     grid-template-columns: 1fr;
   }
 
+
   @media (min-width: 32em) {
     &__description {
-      padding: 0 3rem;
+      padding-inline: 3rem;
     }
 
     &__details-wrapper {
@@ -130,15 +131,27 @@
   @media (min-width: 48em) {
     & {
       text-align: left;
+      grid-template-areas:
+              'heading heading'
+              'planet content';
+      place-content: start;
     }
 
     &__heading-wrapper {
-      grid-column: span 2;
       justify-self: left;
+      grid-area: heading;
     }
 
     &__description {
-      padding: 0;
+      padding-inline: 0;
+    }
+
+    &__content {
+      grid-area: content;
+    }
+
+    &__planet-wrapper {
+      grid-area: planet;
     }
 
     &__nav-list {

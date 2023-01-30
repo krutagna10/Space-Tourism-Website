@@ -59,13 +59,20 @@
     color: hsl(var(--clr-white) / 0.7);
   }
 
-  &__image-wrapper {
-    grid-row: 2;
-  }
 
   @media(min-width: 48em) {
+    & {
+      grid-template-areas:
+              'heading heading'
+              'content image';
+    }
+
     &__image-wrapper {
-      grid-column: 2;
+      grid-area: image;
+    }
+
+    &__content {
+      grid-area: content;
     }
 
     &__nav-list {
@@ -81,7 +88,7 @@
     }
 
     &__heading-wrapper {
-      grid-column: span 2;
+      grid-area: heading;
       justify-self: left;
     }
   }
@@ -110,8 +117,6 @@
       gap: 2.75rem;
     }
   }
-
-
 }
 
 
