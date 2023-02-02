@@ -89,7 +89,7 @@ body {
   position: absolute;
   z-index: 9999;
   background: transparent;
-  color: var(--white);
+  color: var(--clr-white);
   padding: 0.5em 1em;
   margin-inline: auto;
   transform: translateY(-250%);
